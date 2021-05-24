@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <title>FredEnjoyment</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Y&WJR</span>
+        </div>
+        <div id="about">
+        <a href="#" title="Home" onclick="slowCroll('#main-block')">Home</a>
+        <a href="#" onclick="slowScroll('#study')" title="Study">Study</a>
+        <a href="#" onclick="slowScroll('#contact')" title="Send">Send</a>
+        <a href="#" onclick="slowScroll('#faq')" title="faq">FAQ</a>
+        <a href="#" onclick="slowScroll('#important')" title="Contacts">Contacts</a>
+        </div>
+
+
+
+    </header>
+    <div id="logo-block">
+        <h1>Hello, grind machine</h1>
+        <h2>Your wild and free life</h2>
+    </div>
+
+    <div id="main-block">
+        <div class="intro">
+            <h2>My responsibility don't let you down</h2>
+            <span>Know you nigga</span>
+        </div>
+        <div class="text">
+            <span></span>
+        </div>
+    </div>
+    <section id="study">
+        <h2>Interests</h2>
+        <div class="img">
+            <img src="">
+            <span>LOVE IS HURT</span>
+        </div>
+        <div class="img">
+            <img src="css/img/pizza.png" >
+            <span>Orienteering for beginners</span>
+        </div>
+    </section>
+    <div id="contact">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Оплата</span><br>
+      <span class="heading">Как будет проходит оплата?</span>
+
+    </div>
+    <div>
+      <span class="title">Информация</span><br>
+      <span class="heading">Что входит в услуги сервиса</span>
+
+    </div>
+    <div>
+      <span class="title">Гарантии</span><br>
+      <span class="heading">Какие гарантии есть</span>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+  <footer>
+      <div id="important">
+          <h1>hello, neighbour</h1>
+      </div>
+  </footer>
+</body>
+</html>
